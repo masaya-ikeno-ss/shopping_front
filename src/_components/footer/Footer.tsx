@@ -1,8 +1,9 @@
 "use client"
+import styles from "./Footer.module.css"
 
 const Footer = () => {
   return (
-    <footer style={{ padding: "16px 0", textAlign: "center", background: "#4d8cf5", color: "#fff" }}>
+    <footer className={styles.footer}>
       <small>&copy; {new Date().getFullYear()} POND POND</small>
     </footer>
   )

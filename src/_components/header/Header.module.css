@@ -2,12 +2,13 @@
   position: relative;
   padding: 16px 0;
   text-align: center;
-  background-color: #002d7a;
+  background-color: #fff;
 }
 .header h1 {
-  color: #fff;
+  color: #002d7a;
   font-size: 30px;
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* ハンバーガーメニューアイコン */
@@ -29,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: #fff;
+  background: #002d7a;
   border-radius: 3px;
   transition: all 0.3s;
 }
@@ -49,6 +50,7 @@
 .spanContainer.open span:nth-child(1) {
   top: 20px;
   transform: rotate(45deg);
+  background: #fff;
 }
 .spanContainer.open span:nth-child(2) {
   opacity: 0;
@@ -56,6 +58,7 @@
 .spanContainer.open span:nth-child(3) {
   top: 20px;
   transform: rotate(-45deg);
+  background: #fff;
 }
 /* ナビゲーション */
 .navContainer {

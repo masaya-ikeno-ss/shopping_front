@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1>SHOPPING</h1>
+      <h1>SHOPPING SITE</h1>
       <div 
         className={`${styles.spanContainer} ${open ? styles.open : ""}`} 
         onClick={() => setOpen((prev) => !prev)}
@@ -26,6 +26,7 @@ const Header = () => {
         <Link href="/" className={styles.navLink}>Category</Link>
         <Link href="/" className={styles.navLink}>Cart</Link>
         <Link href="/" className={styles.navLink}>Order History</Link>
+        <Link href="/" className={styles.navLink}>Login</Link>
       </div>
     </header>
   )
