@@ -1,8 +1,9 @@
 "use client"
+import styles from "./Header.module.css"
 
 const Header = () => {
   return (
-    <header style={{ padding: "16px 0", textAlign: "center", background: "#4d8cf5", color: "#fff" }}>
+    <header className={styles.header}>
       <h1>ショッピングアプリ</h1>
     </header>
   )

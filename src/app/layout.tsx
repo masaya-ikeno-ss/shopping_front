@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import "./globals.css"
 import React from "react";
-import Header from "@/_components/Header";
-import Footer from "@/_components/Footer";
+import Header from "@/_components/header/Header";
+import Footer from "@/_components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Shopping App",
