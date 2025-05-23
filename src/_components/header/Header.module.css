@@ -1,11 +1,108 @@
 .header {
+  position: relative;
   padding: 16px 0;
-   text-align: center; 
-   background-color: #4d8cf5; 
+  text-align: center;
+  background-color: #002d7a;
 }
-
 .header h1 {
   color: #fff;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
+
+/* ハンバーガーメニューアイコン */
+.spanContainer {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 100;
+  display: block;
+}
+
+.spanContainer span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+/* 3本線を上下中央に絶対配置 */
+.spanContainer span:nth-child(1) {
+  top: 8px;
+}
+.spanContainer span:nth-child(2) {
+  top: 20px;
+}
+.spanContainer span:nth-child(3) {
+  top: 32px;
+}
+
+/* ハンバーガー状態(open)では全て中央に重ねてから回転！ */
+.spanContainer.open span:nth-child(1) {
+  top: 20px;
+  transform: rotate(45deg);
+}
+.spanContainer.open span:nth-child(2) {
+  opacity: 0;
+}
+.spanContainer.open span:nth-child(3) {
+  top: 20px;
+  transform: rotate(-45deg);
+}
+/* ナビゲーション */
+.navContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #002d7a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  transform: translateX(-100%);
+  z-index: 50;
+}
+.navContainer.active {
+  transform: translateX(0%);
+}
+.navLink {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  margin: 1rem auto;
+  transition: color 0.2s;
+}
+.navLink:hover {
+  color: rgb(161, 255, 167);
+}
+
+/* PC時はメニュー常時表示＋ハンバーガーアイコン非表示 */
+/* @media screen and (min-width: 1000px) {
+  .spanContainer {
+    display: none;
+  }
+  .navContainer {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+    height: auto;
+    z-index: 1;
+  }
+  .navLink {
+    margin: 0 1.2rem;
+    font-size: 1.1rem;
+  }
+} */
